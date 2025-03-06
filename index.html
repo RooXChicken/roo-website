@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
+        <link rel="stylesheet" href="style.css">
+        
+        <!-- fix scaling on mobile :D -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>roo's website</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    </head>
+
+    <body>
+        <div id="mainContent" class="centeredDiv">
+            <h1 id="myName">roo</h1>
+            <img id="pfp" onclick="pfpClick()" src="assets/pfp.png"><br>
+            <large>Advanced</large><br>
+            <large>Software & Game Developer</large>
+            <div id="mediaLinks">
+                <a href="https://www.youtube.com/@rooxchicken"><svg class="icon" fill="#FFFFFF" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-20.967,175.63c-4.139,-15.489 -16.337,-27.687 -31.826,-31.826c-28.078,-7.524 -140.653,-7.524 -140.653,-7.524c0,0 -112.575,0 -140.653,7.524c-15.486,4.139 -27.686,16.337 -31.826,31.826c-7.521,28.075 -7.521,86.652 -7.521,86.652c0,0 0,58.576 7.521,86.648c4.14,15.489 16.34,27.69 31.826,31.829c28.078,7.521 140.653,7.521 140.653,7.521c0,0 112.575,0 140.653,-7.521c15.489,-4.139 27.687,-16.34 31.826,-31.829c7.521,-28.072 7.521,-86.648 7.521,-86.648c0,0 0,-58.577 -7.521,-86.652Zm-208.481,140.653l0,-108.002l93.53,54.001l-93.53,54.001Z"/></svg></a>
+                <a href="https://github.com/rooxchicken"><svg class="icon" viewBox="0 0 448 512" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg></a>
+                <a href="https://x.com/rooxchicken"><svg class="icon" fill="#FFFFFF" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z"/></svg></a>
+            </div>
+        </div>
+
+        <div id="projectShowcase", class="centeredDiv">
+            <a href="https://github.com/RooXChicken/jario-party-2">
+            <div class="card">
+                <div class="jpShowcase showcase"></div>
+                <div class="details">
+                    <medium class="cardTxt">Jario Party 2 - Developer</medium>
+                    <small class="cardTxt">Game built with Godot and shares mechanics with Mario Party</small>
+                </div>
+            </div>
+            </a>
+            
+            <a href="https://github.com/RooXChicken/mariokart-timetrials-web"">
+            <div class="card">
+                <div class="mkttShowcase showcase"></div>
+                <div class="details">
+                    <medium class="cardTxt">JP-MKTT - Full Stack</medium>
+                    <small class="cardTxt">Website made to allow players to submit Records to a leaderboard</small>
+                </div>
+            </div>
+            </a>
+
+            <a href="https://x.com/PsychisSMP">
+            <div class="card">
+                <div class="psychisShowcase showcase"></div>
+                <div class="details">
+                    <medium class="cardTxt">Psychis SMP - Developer</medium>
+                    <small class="cardTxt">Spigot plugin & Fabric mod made for the Psychis SMP</small>
+                </div>
+            </div>
+            </a>
+
+        </div>
+    </body>
+
+    <!-- add script at the bottom to ensure all elements have been created -->
+    <script src="main.js" type="text/javascript"></script>
+</html>

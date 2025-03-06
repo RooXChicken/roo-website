@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(35, 0, 35);
+
+    color: rgb(216, 210, 210);
+    text-align: center;
+
+    font-family: 'Cairo';
+    font-weight: 700;
+}
+
+#mediaLinks {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.icon {
+    width: 64px;
+    padding: 16px;
+}
+
+#mainContent {
+    background-color: rgba(0, 0, 0, 0.377);
+    border-radius: 24px 24px 24px 24px;
+
+    padding: 10px;
+    margin: auto;
+    line-height: 32px;
+}
+
+.centeredDiv {
+    padding-top: 8px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#projectShowcase {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: fit-content;
+    gap: 8px;
+}
+
+.card {
+    width: 320px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.377);
+    border-radius: 24px 24px 24px 24px;
+}
+
+.showcase {
+    height: 180px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 24px 24px 24px 24px;
+}
+
+.jpShowcase {
+    background-image: url("assets/projects/jario-party.png");
+}
+
+.mkttShowcase {
+    background-image: url("assets/projects/jp-mktt.png");
+}
+
+.psychisShowcase {
+    background-image: url("assets/projects/psychis-smp.png");
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.cardTxt {
+    text-align: left;
+    padding: 4px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 8px;
+}
+
+large {
+    font-size: 32px;
+}
+
+medium {
+    font-size: 24px;
+
+}
+
+small {
+    font-size: 20px;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    position: inherit;
+    margin: inherit;
+    padding: inherit;
+    width: inherit;
+    height: inherit;
+}
+
+#pfp {
+    border-radius: 100%;
+    outline-style: solid;
+    outline-width: 4px;
+    outline-color: rgb(255, 117, 209);
+}
