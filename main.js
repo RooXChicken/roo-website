@@ -14,5 +14,9 @@ function pfpClick() {
     }
     if(_clicks >= 2) {
         cookieCount.innerText = "cookies: " + (_clicks-1);
+        
+        if(_clicks >= 64) {
+            window.location.href = "pages/cookie/index.html";
+        }
     }
 }
