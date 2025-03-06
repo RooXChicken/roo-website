@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "PopHappiness";
+    src: url("assets/PopHappiness.ttf") format("truetype"),
+    url("assets/PopHappiness.woff") format("woff");
+}
+
+p {
+    font-family: PopHappiness;
+}
+
+@keyframes LTRScroll {
+    from {
+        background-position-x: 0%;
+    }
+    to {
+        background-position-x: -1920px;
+    }
+}
+
+body {
+    min-width: 100%;
+}
+
+.bgElement {
+    position: absolute;
+    image-rendering: pixelated;
+    background-repeat: repeat-x;
+    background-size: contain;
+
+    top: 0px;
+    left: 0px;
+    
+    min-width: 100%;
+    min-height: 200%;
+}
+
+#bgGrass {
+    background-image: url("assets/bg/grass.png");
+
+    animation-duration: 30s;
+    animation-name: LTRScroll;
+    animation-timing-function: linear;
+
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+#bgSky {
+    background-image: url("assets/bg/skylong.png");
+}
+
+#bgSun {
+    background-image: url("assets/bg/sun.png");
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+}
+
+#bgLogo {
+    background-image: url("assets/bg/jp_logo.png");
+    left: 20%;
+    top: 10%;
+
+    min-width: 60%;
+}
+
+#bgClouds {
+    background-image: url("assets/bg/clouds.png");
+
+    animation-duration: 60s;
+    animation-name: LTRScroll;
+    animation-timing-function: linear;
+
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
