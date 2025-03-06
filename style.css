@@ -116,4 +116,5 @@ a {
     outline-style: solid;
     outline-width: 4px;
     outline-color: rgb(255, 117, 209);
+    cursor: pointer;
 }
