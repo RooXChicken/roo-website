@@ -10,7 +10,7 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     </head>
 
-    <body>
+    <body onload="onLoad()"">
         <div id="mainContent" class="centeredDiv">
             <h1 id="myName">roo</h1>
             <img id="pfp" onclick="pfpClick()" src="assets/pfp.png"><br>
@@ -23,38 +23,7 @@
             </div>
         </div>
 
-        <div id="projectShowcase", class="centeredDiv">
-            <a href="https://github.com/RooXChicken/jario-party-2">
-            <div class="card">
-                <div class="jpShowcase showcase"></div>
-                <div class="details">
-                    <medium class="cardTxt">Jario Party 2 - Developer</medium>
-                    <small class="cardTxt">Game built with Godot and shares mechanics with Mario Party</small>
-                </div>
-            </div>
-            </a>
-            
-            <a href="https://github.com/RooXChicken/mariokart-timetrials-web"">
-            <div class="card">
-                <div class="mkttShowcase showcase"></div>
-                <div class="details">
-                    <medium class="cardTxt">JP-MKTT - Full Stack</medium>
-                    <small class="cardTxt">Website made to allow players to submit Records to a leaderboard</small>
-                </div>
-            </div>
-            </a>
-
-            <a href="https://x.com/PsychisSMP">
-            <div class="card">
-                <div class="psychisShowcase showcase"></div>
-                <div class="details">
-                    <medium class="cardTxt">Psychis SMP - Developer</medium>
-                    <small class="cardTxt">Spigot plugin & Fabric mod made for the Psychis SMP</small>
-                </div>
-            </div>
-            </a>
-
-        </div>
+        <div id="projectShowcase", class="centeredDiv"></div>
     </body>
 
     <!-- add script at the bottom to ensure all elements have been created -->

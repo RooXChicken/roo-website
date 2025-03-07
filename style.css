@@ -39,6 +39,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     max-width: fit-content;
+    justify-content: center;
     gap: 8px;
 }
 
@@ -50,6 +51,7 @@ body {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.377);
     border-radius: 24px 24px 24px 24px;
+    justify-content: center;
 }
 
 .showcase {
@@ -58,18 +60,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 24px 24px 24px 24px;
-}
-
-.jpShowcase {
-    background-image: url("assets/projects/jario-party.png");
-}
-
-.mkttShowcase {
-    background-image: url("assets/projects/jp-mktt.png");
-}
-
-.psychisShowcase {
-    background-image: url("assets/projects/psychis-smp.png");
 }
 
 .details {
