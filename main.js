@@ -12,7 +12,7 @@ function onLoad() {
         "https://github.com/RooXChicken/jario-party-2");
 
     createCard("Cat Game - Full Stack", 
-        "Game made for my as a wedding gift for my sister using C# & SDL2", 
+        "Game made as a wedding gift for my sister using C# & SDL2", 
         "assets/projects/cat-game.png", 
         "https://github.com/RooXChicken/cat-game");
 
