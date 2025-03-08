@@ -7,24 +7,34 @@ let _clicks = 0;
 
 function onLoad() {
     createCard("Jario Party 2 - Developer", 
-        "Game built with Godot and shares mechanics with Mario Party", 
+        "Party game that shares mechanics with Mario Party made using Godot & C#", 
         "assets/projects/jario-party.png", 
         "https://github.com/RooXChicken/jario-party-2");
 
+    createCard("Cat Game - Full Stack", 
+        "Game made for my as a wedding gift for my sister using C# & SDL2", 
+        "assets/projects/cat-game.png", 
+        "https://github.com/RooXChicken/cat-game");
+
     createCard("JP-MKTT - Full Stack", 
-        "Website made to allow players to submit Records to a leaderboard", 
+        "Website made to allow players to submit Records to a leaderboard using JS & MySQL", 
         "assets/projects/jp-mktt.png", 
         "https://github.com/RooXChicken/mariokart-timetrials-web");
 
     createCard("AgniLib - Full Stack", 
-        "Library to allow for deep communication between a Minecraft server and client", 
+        "Library to allow for deep communication between a Minecraft server and client made using Java (Spigot & Fabric)", 
         "assets/projects/agnilib.png", 
         "https://github.com/RooXChicken/agnilib-server");
 
     createCard("Psychis SMP - Developer", 
-        "Spigot plugin & Fabric mod made for the Psychis SMP", 
+        "Plugin made for the Psychis Minecraft server using Java (Spigot & Fabric)", 
         "assets/projects/psychis-smp.png", 
         "https://x.com/PsychisSMP");
+
+    createCard("Tetris Mod - Full Stack", 
+        "Mod that adds the ability to play Tetris in Minecraft made using Java (Fabric)", 
+        "assets/projects/tetris-mod.png", 
+        "https://github.com/RooXChicken/tetris-in-mc");
 }
 
 function pfpClick() {
