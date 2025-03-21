@@ -9,6 +9,16 @@
     }
 }
 
+@keyframes cardFadeOut {
+    from { outline-color: rgba(221, 121, 188, 1.0); }
+    to { outline-color: rgba(221, 121, 188, 0.0); }
+}
+
+@keyframes cardFadeIn {
+    from { outline-color: rgba(221, 121, 188, 0.0); }
+    to { outline-color: rgba(221, 121, 188, 1.0); }
+}
+
 body {
     background-color: rgb(35, 0, 35);
     background-image: url("assets/bg.png");
@@ -39,7 +49,7 @@ body {
     padding: 16px;
 }
 
-#mainContent {
+.bg {
     background-color: rgba(0, 0, 0, 0.377);
     border-radius: 24px 24px 24px 24px;
 
@@ -58,10 +68,23 @@ body {
 #projectShowcase {
     display: flex;
     flex-wrap: wrap;
-    /* max-width: fit-content; */
     justify-content: center;
     max-width: 1152px;
     gap: 8px;
+}
+
+.hoverAnim {
+    outline-style: solid;
+    outline-width: 4px;
+    outline-color: rgb(255, 117, 209, 0.0);
+
+    animation: 0.2s 1 normal cardFadeOut;
+    animation-timing-function: linear;
+}
+
+.hoverAnim:hover {
+    outline-color: rgb(221, 121, 188);
+    animation-name: cardFadeIn;
 }
 
 .card {
@@ -118,14 +141,25 @@ a {
     position: inherit;
     margin: inherit;
     padding: inherit;
-    width: inherit;
-    height: inherit;
+    width: fit-content;
+    height: fit-content;
 }
 
 #pfp {
     border-radius: 100%;
     outline-style: solid;
     outline-width: 4px;
-    outline-color: rgb(255, 117, 209);
+    outline-color: rgb(252, 71, 228);
+
     cursor: pointer;
+}
+
+.footerLinks {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#aboutMenu  {
+    display: flex;
+    flex-direction: column;
 }

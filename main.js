@@ -1,11 +1,18 @@
+const footer = document.getElementById("footer");
+const aboutMenu = document.getElementById("aboutMenu");
+
 const pfpImage = document.getElementById("pfp");
 const showcase = document.getElementById("projectShowcase");
+let cards = [];
+
 let cookieCount = null;
 
 let cookieCrunch = new Audio("assets/cookie_crunch.mp3");
 let _clicks = 0;
 
 function onLoad() {
+    document.getElementById("mainContent").classList.add("hoverAnim");
+
     createCard("Jario Party 2 - Developer", 
         "Party game that shares mechanics with Mario Party made using Godot & C#", 
         "assets/projects/jario-party.png", 
@@ -15,6 +22,11 @@ function onLoad() {
         "Game made as a wedding gift for my sister using C# & SDL2", 
         "assets/projects/cat-game.png", 
         "https://github.com/RooXChicken/cat-game");
+        
+    createCard("PieChart - Full Stack", 
+        "Mod that can toggle and manipulate the Debug PieChart for Minecraft made using Java (Fabric)", 
+        "assets/projects/piechart.png", 
+        "https://modrinth.com/mod/toggleable-piechart");
 
     createCard("JP-MKTT - Full Stack", 
         "Website made to allow players to submit Records to a leaderboard using JS & MySQL", 
@@ -31,10 +43,12 @@ function onLoad() {
         "assets/projects/psychis-smp.png", 
         "https://x.com/PsychisSMP");
 
-    createCard("Tetris Mod - Full Stack", 
-        "Mod that adds the ability to play Tetris in Minecraft made using Java (Fabric)", 
-        "assets/projects/tetris-mod.png", 
-        "https://github.com/RooXChicken/tetris-in-mc");
+    // createCard("Tetris Mod - Full Stack", 
+    //     "Mod that adds the ability to play Tetris in Minecraft made using Java (Fabric)", 
+    //     "assets/projects/tetris-mod.png", 
+    //     "https://github.com/RooXChicken/tetris-in-mc");
+
+    cancelAnimation();
 }
 
 function pfpClick() {
@@ -45,6 +59,7 @@ function pfpClick() {
         cookieCount = document.createElement("p");
         document.getElementById("myName").appendChild(cookieCount);
     }
+
     if(_clicks >= 2) {
         cookieCount.innerText = "cookies: " + (_clicks-1);
         
@@ -59,7 +74,8 @@ function createCard(_name, _description, _image, _url) {
     link.href = _url;
 
     let card = document.createElement("div");
-    card.className = "card";
+    card.classList.add("card");
+    card.classList.add("hoverAnim");
 
     let background = document.createElement("div");
     background.className = "showcase";
@@ -86,4 +102,32 @@ function createCard(_name, _description, _image, _url) {
     link.appendChild(card);
 
     showcase.appendChild(link);
+    cards[cards.length] = link;
+}
+
+function enterAbout() {
+    showcase.style.display = "none";
+
+    footer.style.display = "none";
+    aboutMenu.style.display = "flex";
+}
+
+function leaveAbout() {
+    showcase.style.display = "flex";
+    
+    footer.style.display = "flex";
+    aboutMenu.style.display = "none";
+    cancelAnimation();
+}
+
+function cancelAnimation() {
+    let _anims = document.getElementsByClassName("hoverAnim");
+
+    for(let i = 0; i < _anims.length; i++) {
+        let _element = _anims[i];
+
+        _element.getAnimations().forEach((_anim) => {
+            _anim.finish();
+        });
+    }
 }
