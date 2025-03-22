@@ -11,8 +11,6 @@ let cookieCrunch = new Audio("assets/cookie_crunch.mp3");
 let _clicks = 0;
 
 function onLoad() {
-    document.getElementById("mainContent").classList.add("hoverAnim");
-
     createCard("Jario Party 2 - Developer", 
         "Party game that shares mechanics with Mario Party made using Godot & C#", 
         "assets/projects/jario-party.png", 
