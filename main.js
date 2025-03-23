@@ -2,13 +2,17 @@ const footer = document.getElementById("footer");
 const aboutMenu = document.getElementById("aboutMenu");
 
 const pfpImage = document.getElementById("pfp");
+const cookiePopup = document.getElementById("cookiePopup");
+const cookieCountLabel = document.getElementById("cookieCountLabel");
+
 const showcase = document.getElementById("projectShowcase");
 let cards = [];
 
-let cookieCount = null;
-
 let cookieCrunch = new Audio("assets/cookie_crunch.mp3");
-let _clicks = 0;
+let cookieCount = 0;
+
+let cookieShakeInterval = null;
+let cookieShakeTimer = 0;
 
 function onLoad() {
     createCard("Jario Party 2 - Developer", 
@@ -40,31 +44,61 @@ function onLoad() {
         "Plugin made for the Psychis Minecraft server using Java (Spigot & Fabric)", 
         "assets/projects/psychis-smp.png", 
         "https://x.com/PsychisSMP");
-
-    // createCard("Tetris Mod - Full Stack", 
-    //     "Mod that adds the ability to play Tetris in Minecraft made using Java (Fabric)", 
-    //     "assets/projects/tetris-mod.png", 
-    //     "https://github.com/RooXChicken/tetris-in-mc");
-
-    cancelAnimation();
 }
 
 function pfpClick() {
     pfpImage.src = "assets/cookie.png";
+    pfpImage.style.setProperty("--glow-color", "hsl(" + tweenColor() + ", 72%, 63%)");
 
     cookieCrunch.cloneNode().play();
-    if(_clicks++ == 1) {
-        cookieCount = document.createElement("p");
-        document.getElementById("myName").appendChild(cookieCount);
+    if(cookieCount++ == 0) {
+        cookiePopup.style.animationName = "cookiePopup";
+        cookiePopup.style.left = "8px";
     }
 
-    if(_clicks >= 2) {
-        cookieCount.innerText = "cookies: " + (_clicks-1);
+    if(cookieCount >= 2) {
+        createFallingCookie();
+
+        cookieCountLabel.innerText = `🍪 ${cookieCount-1}`;
+        cookieShakeTimer = 16;
+
+        if(!cookieShakeInterval) {
+            cookieShakeInterval = setInterval(() => {
+                setCookiePopupPos(Math.floor(Math.random() * 12) + 2, Math.floor(Math.random() * 12) + 2);
+                
+                if(--cookieShakeTimer <= 0) {
+                    setCookiePopupPos(8, 8);
+                    
+                    clearInterval(cookieShakeInterval);
+                    cookieShakeInterval = null;
+                }
+            }, 4);
+        }
         
-        if(_clicks >= 64) {
+        if(cookieCount >= 64) {
             window.location.href = "pages/cookie/index.html";
         }
     }
+}
+
+function setCookiePopupPos(_x, _y) {
+    cookiePopup.style.left = _x + "px";
+    cookiePopup.style.top = _y + "px";
+}
+
+function createFallingCookie() {
+    let _cookie = document.createElement("large");
+    _cookie.classList.add("fallingCookie");
+    _cookie.innerText = "🍪";
+
+    _cookie.onanimationend = (_this) => { document.body.removeChild(_this.target); };
+    _cookie.style.animationName = "cookieFade" + Math.floor(Math.random() * 3);
+
+    document.body.appendChild(_cookie);
+}
+
+function tweenColor() {
+    return (1.21875*cookieCount) + 281;
 }
 
 function createCard(_name, _description, _image, _url) {
@@ -116,16 +150,4 @@ function leaveAbout() {
     footer.style.display = "flex";
     aboutMenu.style.display = "none";
     cancelAnimation();
-}
-
-function cancelAnimation() {
-    let _anims = document.getElementsByClassName("hoverAnim");
-
-    for(let i = 0; i < _anims.length; i++) {
-        let _element = _anims[i];
-
-        _element.getAnimations().forEach((_anim) => {
-            _anim.finish();
-        });
-    }
 }

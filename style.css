@@ -9,14 +9,24 @@
     }
 }
 
-@keyframes cardFadeOut {
-    from { outline-color: rgba(221, 121, 188, 1.0); }
-    to { outline-color: rgba(221, 121, 188, 0.0); }
+@keyframes cookiePopup {
+    from { left: -120px; }
+    to { left: 8px; }
 }
 
-@keyframes cardFadeIn {
-    from { outline-color: rgba(221, 121, 188, 0.0); }
-    to { outline-color: rgba(221, 121, 188, 1.0); }
+@keyframes cookieFade0 {
+    from { left: 16px; top: 16px; opacity: 1; }
+    to { left: 0px; top: 680px; opacity: 0; }
+}
+
+@keyframes cookieFade1 {
+    from { left: 16px; top: 16px; opacity: 1; }
+    to { left: 16px; top: 680px; opacity: 0; }
+}
+
+@keyframes cookieFade2 {
+    from { left: 16px; top: 16px; opacity: 1; }
+    to { left: 32px; top: 680px; opacity: 0; }
 }
 
 body {
@@ -78,13 +88,11 @@ body {
     outline-width: 4px;
     outline-color: rgb(255, 117, 209, 0.0);
 
-    animation: 0.2s 1 normal cardFadeOut;
-    animation-timing-function: linear;
+    transition: outline-color 0.2s linear;
 }
 
 .hoverAnim:hover {
     outline-color: rgb(221, 121, 188);
-    animation-name: cardFadeIn;
 }
 
 .card {
@@ -149,9 +157,20 @@ a {
     border-radius: 100%;
     outline-style: solid;
     outline-width: 4px;
-    outline-color: rgb(252, 71, 228);
+
+    --glow-color: hsl(281, 72%, 63%);
+    outline-color: var(--glow-color);
+
+    transition: box-shadow 0.1s 0.02s linear,
+        transform 0.1s ease-out,
+        outline-color 0.1s ease-out;
 
     cursor: pointer;
+}
+
+#pfp:hover {
+    box-shadow: 0px 0px 48px 2px var(--glow-color);
+    transform: scale(1.06);
 }
 
 .footerLinks {
@@ -162,4 +181,28 @@ a {
 #aboutMenu  {
     display: flex;
     flex-direction: column;
+}
+
+#cookiePopup {
+    position: absolute;
+    left: -120px;
+
+    text-align: left;
+
+    background-color: rgba(0, 0, 0, 0.377);
+    border-radius: 24px 24px 24px 24px;
+    padding: 8px;
+
+    transition: left 0.04s linear,
+        top 0.04s linear;
+
+    animation: 0.4s ease-out 0s 1 normal;
+}
+
+.fallingCookie {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+
+    animation: 1.2s ease-in-out 0s 1 normal;
 }
