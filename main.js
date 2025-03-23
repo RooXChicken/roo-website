@@ -75,7 +75,7 @@ function pfpClick() {
             }, 4);
         }
         
-        if(cookieCount >= 64) {
+        if(cookieCount >= 65) {
             window.location.href = "pages/cookie/index.html";
         }
     }
@@ -87,7 +87,7 @@ function setCookiePopupPos(_x, _y) {
 }
 
 function createFallingCookie() {
-    let _cookie = document.createElement("large");
+    let _cookie = document.createElement("medium");
     _cookie.classList.add("fallingCookie");
     _cookie.innerText = "🍪";
 

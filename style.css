@@ -15,17 +15,17 @@
 }
 
 @keyframes cookieFade0 {
-    from { left: 16px; top: 16px; opacity: 1; }
+    from { left: 20px; top: 24px; opacity: 1; }
     to { left: 0px; top: 680px; opacity: 0; }
 }
 
 @keyframes cookieFade1 {
-    from { left: 16px; top: 16px; opacity: 1; }
-    to { left: 16px; top: 680px; opacity: 0; }
+    from { left: 20px; top: 24px; opacity: 1; }
+    to { left: 20px; top: 680px; opacity: 0; }
 }
 
 @keyframes cookieFade2 {
-    from { left: 16px; top: 16px; opacity: 1; }
+    from { left: 20px; top: 24px; opacity: 1; }
     to { left: 32px; top: 680px; opacity: 0; }
 }
 
@@ -56,7 +56,7 @@ body {
 
 .icon {
     width: 64px;
-    padding: 16px;
+    padding: 20px;
 }
 
 .bg {
@@ -161,7 +161,7 @@ a {
     --glow-color: hsl(281, 72%, 63%);
     outline-color: var(--glow-color);
 
-    transition: box-shadow 0.1s 0.02s linear,
+    transition: box-shadow 0.25s 0.02s linear,
         transform 0.1s ease-out,
         outline-color 0.1s ease-out;
 
@@ -201,8 +201,8 @@ a {
 
 .fallingCookie {
     position: absolute;
-    left: 16px;
-    top: 16px;
+    left: 20px;
+    top: 24px;
 
     animation: 1.2s ease-in-out 0s 1 normal;
 }
