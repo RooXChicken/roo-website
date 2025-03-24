@@ -149,5 +149,4 @@ function leaveAbout() {
     
     footer.style.display = "flex";
     aboutMenu.style.display = "none";
-    cancelAnimation();
 }
