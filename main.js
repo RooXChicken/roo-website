@@ -98,6 +98,7 @@ function createFallingCookie() {
 }
 
 function tweenColor() {
+    // math formula to interpolate between the two desired HSV values (0, 281 -> 64, 359)
     return (1.21875*cookieCount) + 281;
 }
 
