@@ -15,8 +15,13 @@ let cookieShakeInterval = null;
 let cookieShakeTimer = 0;
 
 function onLoad() {
+    createCard("FireClient - Full Stack", 
+        "Minecraft Mod that adds a ton of QoL features. Targetted for SMP players. Made in Java (Fabric)", 
+        "assets/projects/fireclient.png", 
+        "https://modrinth.com/mod/fireclient-smp");
+
     createCard("Jario Party 2 - Developer", 
-        "Party game that shares mechanics with Mario Party made using Godot & C#", 
+        "Party game that shares mechanics with Mario Party made using Godot", 
         "assets/projects/jario-party.png", 
         "https://github.com/RooXChicken/jario-party-2");
 
@@ -24,24 +29,29 @@ function onLoad() {
         "Game made as a wedding gift for my sister using C# & SDL2", 
         "assets/projects/cat-game.png", 
         "https://github.com/RooXChicken/cat-game");
+    
+    createCard("Fish Viewer - Full Stack", 
+        "Website that can show and modify all Tropical Fish variants in Minecraft. Made in JavaScript", 
+        "assets/projects/fish-viewer.png", 
+        "https://fish-viewer.loveroo.org");
+
+    createCard("Emoji Pack - Full Stack", 
+        "Website that can create custom Emojis for use in Minecraft. Made in JavaScript", 
+        "assets/projects/emoji-pack.png", 
+        "https://emoji-pack.loveroo.org");
+        
+    createCard("Locator Color - Full Stack", 
+        "Website that shows any user's Locator Bar color from Minecraft. Made in JavaScript", 
+        "assets/projects/locator-color.png", 
+        "https://locator-color.loveroo.org");
         
     createCard("PieChart - Full Stack", 
         "Mod that can toggle and manipulate the Debug PieChart for Minecraft made using Java (Fabric)", 
         "assets/projects/piechart.png", 
         "https://modrinth.com/mod/toggleable-piechart");
 
-    createCard("JP-MKTT - Full Stack", 
-        "Website made to allow players to submit Records to a leaderboard using JS & MySQL", 
-        "assets/projects/jp-mktt.png", 
-        "https://github.com/RooXChicken/mariokart-timetrials-web");
-
-    createCard("AgniLib - Full Stack", 
-        "Library to allow for deep communication between a Minecraft server and client made using Java (Spigot & Fabric)", 
-        "assets/projects/agnilib.png", 
-        "https://github.com/RooXChicken/agnilib-server");
-
     createCard("Psychis SMP - Developer", 
-        "Plugin made for the Psychis Minecraft server using Java (Spigot & Fabric)", 
+        "Plugin made for the Psychis Minecraft server using Kotlin (Spigot & Fabric)", 
         "assets/projects/psychis-smp.png", 
         "https://x.com/PsychisSMP");
 }
